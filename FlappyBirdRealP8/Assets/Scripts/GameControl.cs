@@ -1,11 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 using UnityEngine.SceneManagement;
 
 public class GameControl : MonoBehaviour
 {
     public static GameControl instance;
+    public TextMeshProUGUI text;
+    public TextMeshPro ScoreText;
     public GameObject gameOverText;
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
@@ -32,7 +35,7 @@ public class GameControl : MonoBehaviour
     }
     public void BirdDied()
     {
-        gameObject.SetActive(true);
+        gameOverText.SetActive(true);
         gameOver = true;
     }
 }
